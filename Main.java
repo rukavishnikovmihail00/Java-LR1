@@ -1,3 +1,7 @@
+// На вход подаются 3 начальных состояния автомата.
+// Происходит переход в новые состояния, после чего программа запрашиваем желаемое количество
+// переходов и выдает результат после каждого выполнения алгоритма
+
 package com.company;
 
 import java.util.Scanner;
@@ -16,5 +20,12 @@ public class Main {
         ExtendedAutomateState oExtended = new ExtendedAutomateState(id1,id2,id3);
         oExtended.changeState();
         oExtended.printState();
+
+        System.out.println("Enter the num of state changes: ");
+        int repeat = in.nextInt();
+        for (int i = 0; i < repeat; i++) {
+            oExtended.changeState();
+            oExtended.printState();
+        }
     }
 }
