@@ -8,8 +8,8 @@ package com.company;
 public class Main {
     public static void main(String[] args) {
 
-       App oApp = new App();
-       oApp.Start();
+        App app = new App();
+        app.Start();
 
     }
 }
